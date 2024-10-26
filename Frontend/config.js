@@ -1,6 +1,6 @@
 // src/config.js
 const config = {
-    API_URL: 'http://localhost:4200'
+    API_URL: 'https://interview-backend-ydot.onrender.com'
 }
 export default config;
   
