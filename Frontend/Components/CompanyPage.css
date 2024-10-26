@@ -1,0 +1,145 @@
+.company-page {
+    width: 100%;
+    max-width: 1000px; /* Increased from 800px to 1000px */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 20px;
+  }
+  
+  .company-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px; /* Increased padding */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px; /* Increased margin */
+  }
+  
+  .company-name {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600; /* Bolder than other text */
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .company-card p {
+    margin: 12px 0; /* Slightly increased margin */
+    line-height: 1.6;
+    font-size: 1.1rem; /* Slightly larger font */
+  }
+  
+  .company-card strong {
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .rounds-section {
+    margin-top: 20px;
+  }
+  
+  .rounds-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 15px;
+  }
+  
+  .round-item {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 8px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    max-height: 150px;
+    overflow-y: auto;
+    font-size: 1rem;
+  }
+  
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 24px; /* Adjust the size as needed */
+  }
+  
+  .filter-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* This controls the gap between the label and the dropdown */
+  }
+  
+  select {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .filter-section {
+      margin-top: 10px;
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .company-page {
+      padding: 15px;
+    }
+  
+    .company-card {
+      padding: 20px;
+    }
+  
+    .company-name {
+      font-size: 1.6rem;
+    }
+  
+    .company-card p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .company-page {
+      padding: 10px;
+    }
+  
+    .company-card {
+      padding: 15px;
+    }
+  
+    .company-name {
+      font-size: 1.4rem;
+    }
+  
+    .company-card p {
+      font-size: 0.9rem;
+    }
+  
+    .round-item {
+      font-size: 0.9rem;
+      max-height: 120px;
+    }
+  }
+
+ 

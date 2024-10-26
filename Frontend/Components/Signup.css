@@ -1,0 +1,71 @@
+/* General Styles */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 15vh;
+  }
+  
+  .signup-input {
+    width: 93%;
+    max-width: 300px; /* Consistent width on desktop */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .signuphead{
+        padding-bottom: 10px;
+  }
+  .signup-button {
+    width: 90%;
+    max-width: 300px; /* Consistent width with input fields */
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color:#6666ff;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .signup-button :hover {
+    background-color:#8080ff;
+  }
+  
+  /* Responsive for mobile */
+  @media (max-width: 768px) {
+    .signup-form {
+      width: 100%;
+      max-width: 350px; /* Slightly narrower form on mobile */
+    }
+  
+    .signup-input, .signup-button  {
+      width: 100%;
+    }
+  }
+  
+  /* Responsive for smaller devices like smartphones */
+  @media (max-width: 480px) {
+    .signup-form {
+      padding: 15px;
+      max-width: 300px;
+    }
+  
+    .signup-input,  .signup-button  {
+      font-size: 14px;
+    }
+  }
+  
+  

@@ -1,0 +1,170 @@
+.admin-edit-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .loading-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 20px;
+  }
+  
+  .edit-form {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .round-input {
+    margin-top: 15px;
+  }
+  
+  .round-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+  
+  .submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  .round-input textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+    resize: vertical;
+    min-height: 150px;
+    max-height: 250px;
+    overflow-y: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .round-input textarea {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .round-input textarea {
+      font-size: 12px;
+      padding: 6px;
+    }
+  }
+  /* ... (keep the existing styles) ... */
+
+.round-input {
+    margin-top: 15px;
+  }
+  
+  .round-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: normal; /* Changed from pre-wrap to normal */
+    overflow-wrap: break-word;
+    resize: vertical; /* Allows vertical resizing */
+    min-height: 100px; /* Set a minimum height */
+    max-height: 200px; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  /* ... (keep the rest of the existing styles) ... */
+  @media (max-width: 768px) {
+    .admin-edit-container {
+      padding: 15px;
+    }
+  
+    .edit-form {
+      padding: 15px;
+    }
+  
+    input[type="text"],
+    input[type="number"],
+    .round-input input {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .submit-button {
+      padding: 10px 16px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .admin-edit-container {
+      padding: 10px;
+    }
+  
+    .edit-form {
+      padding: 10px;
+    }
+  
+    input[type="text"],
+    input[type="number"],
+    .round-input input {
+      font-size: 12px;
+      padding: 6px;
+    }
+  
+    .submit-button {
+      padding: 8px 14px;
+      font-size: 0.8rem;
+    }
+  }

@@ -1,0 +1,70 @@
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px; /* Restricting max width for better readability */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 15vh;
+  }
+  
+  .login-input {
+    width: 90%;
+    max-width: 300px; /* Consistent width on desktop */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .headlogin{
+    padding-bottom: 15px;
+    
+  }
+  .login-button {
+    width: 90%;
+    max-width: 300px; /* Consistent width with input fields */
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color:#6666ff;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .login-input :hover {
+    background-color:#8080ff;
+  }
+  
+  /* Responsive for mobile */
+  @media (max-width: 768px) {
+    .login-form {
+      width: 100%;
+      max-width: 350px; /* Slightly narrower form on mobile */
+    }
+  
+    .login-input, .login-button {
+      width: 100%;
+    }
+  }
+  
+  /* Responsive for smaller devices like smartphones */
+  @media (max-width: 480px) {
+    .login-form {
+      padding: 15px;
+      max-width: 300px;
+    }
+  
+    .login-input,  .login-button  {
+      font-size: 14px;
+    }
+  }
