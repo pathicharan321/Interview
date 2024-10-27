@@ -55,7 +55,7 @@ module.exports.postLogin = async (req, res, next) => {
             httpOnly: true,
             maxAge: 24 * 60 * 60 * 1000,
             secure: process.env.NODE_ENV === 'production',  
-           sameSite: 'Strict'
+            sameSite: 'None',
         });        
         return res.status(200).json({
             token,
