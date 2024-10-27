@@ -5,10 +5,10 @@ const {Schema}=mongoose;
   
   // Main document schema that embeds the roundSchema
   const mainSchema = new Schema({
-    name: { type: String, required: true },              // Name of the student
-    company_name: { type: String, required: true},      // Name of the company
-    position: { type: String, required: true },          // Role offered
-    compensation: { type: Number, required: true },      // Salary package
+    name: { type: String, required: true },              
+    company_name: { type: String, required: true},     
+    position: { type: String, required: true },      
+    compensation: { type: String, required: true },      
     number_of_rounds: { type: Number, required: true },
     Technical_rounds:{type: Number, required: true },
     HR_round:{type: Number, required: true },
