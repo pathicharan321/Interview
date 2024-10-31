@@ -90,7 +90,7 @@ const Signup = () => {
           style={{ width: '200px' }} // Consistent width with the username input
         />
         <br />
-        <button className='signup-button' type="submit">Submit</button>
+        <button className='signup-button' type="submit">Sign Up</button>
         <button  className='signup-button' id='signuploginbutton' onClick={gotologin}>Login As user</button>
       <button className='signup-button' id='gotoAdminButton'onClick={gotoAdmin}>Sign up as Admin</button>
       </form>
