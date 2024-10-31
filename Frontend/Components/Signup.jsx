@@ -78,7 +78,7 @@ const Signup = () => {
           onChange={inputChangeHandler}
           name="Username"
           placeholder="Enter Your Username"
-          style={{ width: '220px' }}
+          
         />
         <br />
         <input 
@@ -87,7 +87,7 @@ const Signup = () => {
           value={password}
           onChange={passwordChangeHandler}
           placeholder="Enter Your Password"
-          style={{ width: '200px' }} // Consistent width with the username input
+          
         />
         <br />
         <button className='signup-button' type="submit">Sign Up</button>
