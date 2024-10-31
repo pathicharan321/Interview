@@ -51,7 +51,7 @@ const Adminlogin = () => {
             <br/>
             <input  className='login-input'type="password" value={password} onChange={passwordChangeHandler} placeholder='Enter Your Paaword'></input>
             <br />
-            <button className='login-button' type="submit" >Submit</button>
+            <button className='login-button' type="submit">Login</button>
           </form>
           <div>
           <ToastContainer
