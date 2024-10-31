@@ -45,7 +45,7 @@ const AdminSignup = () => {
            <h1 className='adminhead'>Admin SignUp</h1>
           <input type="text" className='signup-input' value={inputValue} onChange={inputChangeHandler} name='Username' placeholder='Enter Your UserName'></input>
           <input type="password" className='signup-input' value={password} onChange={passwordChangeHandler} placeholder='Enter Your Paaword'></input>
-          <button  type="submit" className='signup-button' >Submit</button>
+          <button  type="submit" className='signup-button' >Sign Up</button>
           </form>
           <div>
           <ToastContainer
