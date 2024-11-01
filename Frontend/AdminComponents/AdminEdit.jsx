@@ -5,6 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './AdminEdit.css'; // Make sure this path is correct
 import config from '../config';
+import AdminLoading from './AdminLoading';
 const AdminEdit = () => {
   const { id } = useParams();
   const [setData, updatesetData] = useState(null);
@@ -108,6 +109,7 @@ const AdminEdit = () => {
     };
 
     try {
+      updateloading(true);
       const response = await axios.put(`${config.API_URL}/admin/Update/${setData[0]._id}`, data,{
         headers: {
           'Content-Type': 'application/json'
@@ -119,14 +121,17 @@ const AdminEdit = () => {
         navigate('/admin/previousupload');
       }
     } catch (err) {
-      toast.error(err.response.data.message||'Internak Server Error');
+      toast.error(err.response.data.message||'Internal Server Error');
       navigate('/admin/previousupload');
+    }
+    finally{
+      updateloading(false);
     }
   };
 
   return (
     <div className="admin-edit-container">
-      {loading && <div className="loading-message">Loading...</div>}
+      {loading &&<AdminLoading/>}
       {!loading && (
         <div>
         <form onSubmit={handleSubmit} className="edit-form">

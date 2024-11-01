@@ -7,9 +7,11 @@ import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
 import './InterviewForm.css';
 import config from '../config';
+import AdminLoading from './AdminLoading';
 
 const InterviewForm = () => {
   const navigate = useNavigate();
+  const[loading,Setloading]=useState(false);
   const [formData, setFormData] = useState({
     name: '',
     company_name: '',
@@ -78,6 +80,7 @@ const InterviewForm = () => {
     };
 
     try {
+      Setloading(true);
       const response = await axios.post(`${config.API_URL}/admin/Submitform`, data, {
         headers: {
           'Content-Type': 'application/json'
@@ -94,10 +97,14 @@ const InterviewForm = () => {
         toast.error('Something went wrong!');
       }
     }
+    finally{
+      Setloading(false);
+    }
   };
 
   return (
     <div>
+    {!loading&&<div>
       <div className='upsidediv'>
       <button onClick={gotoprevupload} className="previous-uploads-button">Show previous Uploads</button>
       </div>
@@ -199,7 +206,10 @@ const InterviewForm = () => {
         <button type="submit" className="submit-button">Submit</button>
       </form>
       
-      <ToastContainer
+    </div>
+    </div>}
+    {loading&&<AdminLoading/>}
+    <ToastContainer
             position="top-right"
             autoClose={3000}
             hideProgressBar={false}
@@ -208,7 +218,6 @@ const InterviewForm = () => {
             draggable
             theme="colored"
           />
-    </div>
     </div>
   );
 };

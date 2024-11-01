@@ -6,10 +6,11 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './AdminLogin.css';
 import config from '../config';
-
+import AdminLoading from './AdminLoading';
 const Adminlogin = () => {
     const [inputValue,setInputValue]=useState('');
     const [password,setpassword]=useState('');
+    const[loading,Setloading]=useState(false);
     const navigate=useNavigate();
     const Submitfunction= async (e)=>{
       e.preventDefault();
@@ -18,6 +19,7 @@ const Adminlogin = () => {
           password:password
       };
       try{
+      Setloading(true);
         const response= await axios.post(`${config.API_URL}/admin/login`, data, {
           headers: {
             'Content-Type': 'application/json'
@@ -34,7 +36,9 @@ const Adminlogin = () => {
           toast.error('An unexpected error occurred'); // Default error message
         }
       }
-      
+      finally{
+        Setloading(false);
+      }
     }
    const inputChangeHandler=(e) =>{
       setInputValue(e.target.value);
@@ -44,15 +48,15 @@ const Adminlogin = () => {
     }
     return (
         <div>
-          
-          <form  className='login-form'onSubmit={Submitfunction}>
+          {!loading&&<form  className='login-form'onSubmit={Submitfunction}>
            <h1 className='headadminlogin'>Admin Log In</h1>
             <input className='login-input'  type="text" value={inputValue} onChange={inputChangeHandler} name='Username' placeholder='Enter Your UserName' ></input>
             <br/>
             <input  className='login-input'type="password" value={password} onChange={passwordChangeHandler} placeholder='Enter Your Paaword'></input>
             <br />
             <button className='login-button' type="submit">Login</button>
-          </form>
+          </form>}
+          {loading&&<AdminLoading/>}
           <div>
           <ToastContainer
             position="top-right"
@@ -65,7 +69,6 @@ const Adminlogin = () => {
           />
          </div>
         </div>
-
       )
 }
 

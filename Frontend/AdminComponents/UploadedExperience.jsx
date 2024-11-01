@@ -6,6 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './UploadedExperience.css'; // Importing the CSS file
 import config from '../config';
+import AdminLoading from './AdminLoading';
 const UploadedExperience = () => {
   const [uploadData, SetuploadData] = useState([]);
   const [loading, Setloading] = useState(true);
@@ -24,6 +25,7 @@ const UploadedExperience = () => {
           toast.success("Your  updata has been uploaded Successfully")
         SetuploadData(response.data);
       } catch (err) {
+        toast.error('response.data.message');
         console.log(err);
       }
       Setloading(false);
@@ -37,7 +39,7 @@ const UploadedExperience = () => {
 
   return (
     <div className="experience-container">
-      {loading && <div className="loading-message">Loading</div>}
+      {loading && <AdminLoading/>}
       {!loading && uploadData.map((doc, index) => (
         <div key={index} className="experience-card">
           <p><strong>Name:</strong> {doc.name}</p>
