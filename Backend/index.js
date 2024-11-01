@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 app.use(cors({
-  origin: process.env.frontendurl||4200,
+  origin: process.env.frontendurl||4000,
   credentials: true, 
 }));
 
