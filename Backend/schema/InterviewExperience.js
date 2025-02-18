@@ -1,9 +1,5 @@
 const mongoose=require("mongoose");
 const {Schema}=mongoose;
-
-
-  
-  
   const mainSchema = new Schema({
     name: { type: String, required: true },              
     company_name: { type: String, required: true},     
