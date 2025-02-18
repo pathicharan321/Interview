@@ -25,9 +25,9 @@ module.exports.postSignUp = async (req, res, next) => {
         if (user) {
             return res.status(405).json({ message: 'Username is already taken. Please choose another one.' });
         }
-        // Hash the password using await for a promise-based approach
+        
         const hash = await bcrypt.hash(password, saltRounds);
-       // Create the new user
+      
         await Users.create({
             username: username,
             password: hash
