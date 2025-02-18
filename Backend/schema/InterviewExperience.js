@@ -1,9 +1,9 @@
 const mongoose=require("mongoose");
 const {Schema}=mongoose;
 
-// Subdocument schema for each round
+
   
-  // Main document schema that embeds the roundSchema
+  
   const mainSchema = new Schema({
     name: { type: String, required: true },              
     company_name: { type: String, required: true},     
@@ -19,9 +19,7 @@ const {Schema}=mongoose;
   }                            
   });
   
-  // Creating the model
   const InterviewExperience = mongoose.model("InterviewExperience", mainSchema);
-  
-  // Exporting the model
+
   module.exports = InterviewExperience;
   
