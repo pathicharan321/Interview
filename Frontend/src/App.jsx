@@ -5,8 +5,8 @@ import PrivateRoute from "../Components/PrivateRoute";
 import AdminPrivaterouter from "../AdminComponents/AdminPrivaterouter";
 import Signup from '../Components/Signup';
 import Login from '../Components/Login';
-import Home from '../Components/Home';  // Make sure this import exists
-import CompanyPage from '../Components/CompanyPage';  // Make sure this import exists
+import Home from '../Components/Home';  
+import CompanyPage from '../Components/CompanyPage'; 
 import Adminlogin from "../AdminComponents/Adminlogin";
 import AdminSignup from "../AdminComponents/AdminSignup";
 import InterviewForm from "../AdminComponents/InterviewForm";
