@@ -95,7 +95,6 @@ module.exports.getpreviousUpload=async(req,res)=>{
         let interviewExperiences = await InterviewExperience.find({
             _id: { $in: roundsArray }
           });
-          // Send the fetched data to the frontend
          return  res.status(200).json(interviewExperiences );
      }
      else{
